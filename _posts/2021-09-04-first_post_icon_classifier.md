@@ -1,5 +1,3 @@
-# 2021-09-04-first_post_icon_classifier
-
 # My First CNN: The Icon Classifier
 
 ## Why fastai?
