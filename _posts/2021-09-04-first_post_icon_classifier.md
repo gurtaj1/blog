@@ -367,4 +367,4 @@ I had officially made my first personally trained CNN model and [deployed it onl
 
 **EDIT (09/05/2023):**
 
-The model is no longer hosted on herokuapp (I assume due to my inactivity), but you can now find the same model, with a slightly different UI, [here]('https://huggingface.co/spaces/gurtaj/icon-classifier-hugging-face-hosted).
+The model is no longer hosted on herokuapp (I assume due to my inactivity), but you can now find the same model, with a slightly different UI, [here](https://huggingface.co/spaces/gurtaj/icon-classifier-hugging-face-hosted).
