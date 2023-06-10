@@ -15,9 +15,9 @@ I wanted to get into machine learning, and I had heard that TensorFlow and PyTor
 
 The course first takes us through the differences/similarities between a program and a neural network model; in short _once a model is trained_ it can be treated just like a program.
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Untitled.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Untitled.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Untitled.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Untitled.png)
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Untitled%201.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Untitled%201.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Untitled%201.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Untitled%201.png)
 
 It also tells us some key things to be aware of when training models:
 
@@ -25,7 +25,7 @@ Avoid overfitting:
 
 This is where the model gets really good at predicting the dataset that you have provided for training but is no good for data outside that set:
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Untitled%202.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Untitled%202.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Untitled%202.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Untitled%202.png)
 
 It has memorised the training set rather than trying to find generalisable underlying patterns in the data.
 
@@ -125,7 +125,7 @@ Here, we are telling fastai:
 
   - `RandomResizedCrop` selects a random part of each image and then crops to just that part. On each epoch it will randomly select a different part of the image.
 
-    ![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-12_at_08.22.45.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-12_at_08.22.45.png)
+    ![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-12_at_08.22.45.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-12_at_08.22.45.png)
 
     - This allows the image to focus on and recognise different features in the images.
     - It also reflects how images work in the real world; different photos of the same thing can be framed in slightly different ways.
@@ -139,7 +139,7 @@ Here, we are telling fastai:
   - `batch_tfms` is like `item_tfms` but it applies its function to a batch of data, at a time, using the GPU.
   - `aug_transforms` creates random variations of our input data, such that they appear different but do not change the meaning of the data.'
 
-    ![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-12_at_08.23.19.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-12_at_08.23.19.png)
+    ![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-12_at_08.23.19.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-12_at_08.23.19.png)
 
     - Common data augmentations include:
       - Rotation
@@ -173,23 +173,23 @@ Here I have told fastai to create a convolutional neural network (CNN).
 
   - We use `fine_tune` rather than `fit` because we are using a pretrained model here and do not want to throw away all of its' current capabilities.
 
-  ![Screenshot 2021-08-31 at 09.20.13.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-31_at_09.20.13.png)
+  ![Screenshot 2021-08-31 at 09.20.13.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-31_at_09.20.13.png)
 
 fastai also has a way of plotting the top losses of a trained network `interp.plot_top_losses`. It also has an `ImageClassifierCleaner()` tool. The latter is a GUI that allows us to go through the data in order of highest to lowest loss. When i went through the data that was labelled as Drake i saw that there was a high number of images that were not the singer Drake but other well known Drake's who were sports players, random drakes i had no awareness of, and also Nathan Drake, the video game character from Uncharted:
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-10_at_08.13.16.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-10_at_08.13.16.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-10_at_08.13.16.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-10_at_08.13.16.png)
 
 One of these imposter Drakes was even confused to be Beyoncé somehow:
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-10_at_08.14.25.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-10_at_08.14.25.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-10_at_08.14.25.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-10_at_08.14.25.png)
 
 I figured i should switch Drake for another well known celebrity with a more unique name. So instead i went with Eminem, in retrospect he probably should have been my first choice all along!
 
 Another handy visual tool that is provided by fastai is `interp.plot_confusion_matrix`. It is a visual representation of what the model predicts vs what the real truth is (calculated using the validation set):
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-10_at_08.11.43.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-10_at_08.11.43.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-10_at_08.11.43.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-10_at_08.11.43.png)
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-12_at_08.26.16.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-12_at_08.26.16.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-12_at_08.26.16.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-12_at_08.26.16.png)
 
 Once i had trained this model with the new choice of famous icons, it was time to turn it into a a demo-able online application. We use fastai's `learn.export()` which saves both the _architecture_ and the trained _parameters_ of our model. We can now use this exported model wherever we want our app to exist.
 
@@ -203,7 +203,7 @@ I simply installed Microsoft's Jupyter and Python extensions for vscode and i wa
 
 TURNS OUT there is a bug associated with using an upload button from `ipywidgets` which is needed for this app, at the time of me trying to do this, vscode were aware of the issue but had ['no plans to fix' it](https://github.com/microsoft/vscode-jupyter/issues/4525):
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-08_at_11.52.48.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-08_at_11.52.48.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-08_at_11.52.48.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-08_at_11.52.48.png)
 
 For this reason i had to ditch using vscode and opt to just run jupyter notebook from my CLI (command line interface) manually.
 
@@ -301,15 +301,15 @@ Once we have `jupyter notebook` running it is actually very easy to access `voil
 
 The notebook tree looks something like this:
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-08_at_16.44.19.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-08_at_16.44.19.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-08_at_16.44.19.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-08_at_16.44.19.png)
 
 And the voila tree looks something like this:
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-08_at_16.45.12.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-08_at_16.45.12.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-08_at_16.45.12.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-08_at_16.45.12.png)
 
 The voila instance of my notebook looked like this at first:
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-09_at_07.40.13.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-09_at_07.40.13.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-09_at_07.40.13.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-09_at_07.40.13.png)
 
 Notice the installation code displaying at the top. Clearly this is of no importance to the user and should be hidden. I did a little ducking on how to hide certain outputs from appearing in voila but i didn't see anything that looked very promising. I decided to just try and comment out the installation code in my notebook:
 
@@ -320,7 +320,7 @@ Notice the installation code displaying at the top. Clearly this is of no import
 
 Then when i ran the app it looked like this:
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-09_at_07.43.18.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/2021-09-04-first_post_icon_classifier/Screenshot_2021-08-09_at_07.43.18.png)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-09_at_07.43.18.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/Screenshot_2021-08-09_at_07.43.18.png)
 
 All the things, and _only_ the things, that i want to appear to a user.
 
