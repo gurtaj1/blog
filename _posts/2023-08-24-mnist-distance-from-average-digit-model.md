@@ -15,6 +15,7 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
 ```
+
 ```python
 # install fastkaggle if not available
 try: import fastkaggle
