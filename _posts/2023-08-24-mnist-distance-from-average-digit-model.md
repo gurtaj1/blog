@@ -1,7 +1,7 @@
 # MNIST Distance from Average Digit Model
 This post is the main parts of a jupyter notebook (instantiated on [Kaggle](https://www.kaggle.com/)) in which I made my first submission to a Kaggle competition. The competition was to build a Digit Classifier based on the MNIST data set, and to make it as accurate as possible on the competition test data.  
 
-I created a model that was not deep learning, or any type of machine learning for that matter. It was a simple model that:
+I created a model that was not deep learning, but instead just a simple model that:
 - took the average of the pixel values for each digit class (0-9) in the training data
 - and got it's predictions (of the classes of input images), by chacking which of the 'average digits' they were closest to.
 ## The Kaggle Notebook
