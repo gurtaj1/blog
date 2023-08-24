@@ -5,6 +5,7 @@ I created a model that was not deep learning, or any type of machine learning fo
 - took the average of the pixel values for each digit class (0-9) in the training data
 - and got it's predictions (of the classes of input images), by chacking which of the 'average digits' they were closest to.
 ## The Kaggle Notebook
+
 ```python
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
