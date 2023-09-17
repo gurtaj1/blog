@@ -1,3 +1,6 @@
+---
+use_math: true
+---
 # Simple MNIST NN from scratch (using numpy, no Pytorch/TF/Keras)
 ## Introduction
 This notebook aims to implement a simple two-layer neural network and train it on the MNIST digit recognizer dataset.  
