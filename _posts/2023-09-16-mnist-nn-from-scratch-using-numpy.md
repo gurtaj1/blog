@@ -1469,7 +1469,7 @@ test_prediction(3, W1, b1, W2, b2)
 
 
     
-![png](../post%20assets/output_39_1.png)
+![png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/output_39_1.png)
     
 
 
@@ -1479,7 +1479,7 @@ test_prediction(3, W1, b1, W2, b2)
 
 
     
-![png](../post%20assets/output_39_3.png)
+![png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/output_39_3.png)
     
 
 
@@ -1489,7 +1489,7 @@ test_prediction(3, W1, b1, W2, b2)
 
 
     
-![png](../post%20assets/output_39_5.png)
+![png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/output_39_5.png)
     
 
 
@@ -1499,7 +1499,7 @@ test_prediction(3, W1, b1, W2, b2)
 
 
     
-![png](../post%20assets/output_39_7.png)
+![png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/output_39_7.png)
     
 
 

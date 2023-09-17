@@ -1206,7 +1206,7 @@ learn.lr_find()
 
 
     
-![png](../post%20assets/output_76_3.png)
+![png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/output_76_3.png)
     
 
 
@@ -1440,7 +1440,7 @@ This is not something we can use to do classification, since we need a single ou
 
 > Padding is number of pixels added to the outside of our image. Without padding, and with a stride-1 (no change in output size due to slide) the output matrix will lose size on each dimension. This is due to the fact that the kernel will not go boyond the edges of the image itself. We can counteract this by adding padding. The necessary padding on each side to keep the same shape is `ks//2`. (see image below that shows how the image can move further with a padding of 2 added)
 
-![image.png](../post%20assets/285fa23e-2ac4-412b-a047-3a9a20b35c5d.png)
+![image.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/285fa23e-2ac4-412b-a047-3a9a20b35c5d.png)
 
 The function below is created and used for the sake of easier manipulation of the key factors (input and output channels, stride, etc.)
 
@@ -1530,7 +1530,7 @@ learn.lr_find()
 
 
     
-![png](../post%20assets/output_96_3.png)
+![png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/output_96_3.png)
     
 
 
