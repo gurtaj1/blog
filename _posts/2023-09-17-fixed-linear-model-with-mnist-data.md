@@ -6,6 +6,14 @@ In this notebook I aim to see if any of this new found knowledge can help to imp
 
 The notebook below details my efforts. Note that I did not include the explanations from the original notebook, only explanations on anything I changed or discovered.
 
+## TL;DR
+The places where I was going wrong previously were as follows
+- I was previously making one measurement/prediction per image
+  - In the end this is what we want but for the interim (traning and accuracy determination) it helps to have one output for each class we are trying to distinguish between (10 classes for digits 0-9)
+- The shape of my data at each step matters more than I realised. The matrix multiplications as well as simple things like subtraction and mean, all require care and attention to detail to ensure that the data is in the correct format. Having data in the wrong format does not always mean that an error will be thrown and this is why these things can cause big issues further down the line without us even becoming aware of what is causing them (as was the case for me in my accuracy calcuations)
+
+---
+
 
 ```python
 # This Python 3 environment comes with many helpful analytics libraries installed
