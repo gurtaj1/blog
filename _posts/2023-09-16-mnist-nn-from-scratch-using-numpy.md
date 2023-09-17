@@ -427,10 +427,14 @@ Out Neural Network will have a simple 2-layer architecture.
 - output layer will have 10 units corresponding to the ten digit classes, with softmax activation.  
 
 **Forward propogation**  
-1. unactivated first layer values, $Z^{[1]}$: $$Z^{[1]} = W^{[1]} X + b^{[1]}$$
-2. first layer activation values, $A^{[1]}$: $$A^{[1]} = g_{\text{ReLU}}(Z^{[1]})$$
-3. unactivated second layer values, $Z^{[2]}$: $$Z^{[2]} = W^{[2]} A^{[1]} + b^{[2]}$$
-4. second layer activation values, $A^{[2]}$: $$A^{[2]} = g_{\text{softmax}}(Z^{[2]})$$
+1. unactivated first layer values, $Z^{[1]}$:  
+$$Z^{[1]} = W^{[1]} X + b^{[1]}$$
+2. first layer activation values, $A^{[1]}$:  
+$$A^{[1]} = g_{\text{ReLU}}(Z^{[1]})$$
+3. unactivated second layer values, $Z^{[2]}$:  
+$$Z^{[2]} = W^{[2]} A^{[1]} + b^{[2]}$$
+4. second layer activation values, $A^{[2]}$:  
+$$A^{[2]} = g_{\text{softmax}}(Z^{[2]})$$
 
 
 - $X$: 784 inputs x columns/samples.
@@ -451,13 +455,19 @@ Out Neural Network will have a simple 2-layer architecture.
 
 **Backward propogation**  
 1. second layer
-  1. difference between output, $A^{[2]}$, and ground truth, $Y$ (the loss function): $$dZ^{[2]} = A^{[2]} - Y$$
-  2. how much $W^{[2]}$ contributed to the above difference/error (the derivative of the loss function wrt $W^{[2]}$): $$dW^{[2]} = \frac{1}{m} dZ^{[2]} A^{[1]T}$$
-  3. how much $b^{[2]}$ contributed to the above difference/error (the derivative of the loss function wrt $b^{[2]}$): $$dB^{[2]} = \frac{1}{m} \Sigma {dZ^{[2]}}$$
-1. first layer/hidden layer
-  1. now we determine how much the hidden layer/first layer contributed towards the error. $W^{[2]T} dZ^{[2]}$ is applying the weights, in reverse (transposed), to the errors of the second layer, in order to get to the errors of the first layer. $g^{[1]\prime}$ is the derivative of the activation function, which we also need in order to get the propper error for the first layer.: $$W^{[2]T} dZ^{[2]} .* g^{[1]\prime} (Z^{[1]})$$ 
-  2. how much $W^{[1]}$ contributed to the above difference/error (the derivative of the loss function wrt $W^{[1]}$): $$dW^{[1]} = \frac{1}{m} dZ^{[1]} A^{[0]T}$$
-  3. how much $b^{[1]}$ contributed to the above difference/error (the derivative of the loss function wrt $b^{[1]}$): $$dB^{[1]} = \frac{1}{m} \Sigma {dZ^{[1]}}$$  
+  - difference between output, $A^{[2]}$, and ground truth, $Y$ (the loss function):  
+  $$dZ^{[2]} = A^{[2]} - Y$$
+  - how much $W^{[2]}$ contributed to the above difference/error (the derivative of the loss function wrt $W^{[2]}$):  
+  $$dW^{[2]} = \frac{1}{m} dZ^{[2]} A^{[1]T}$$
+  - how much $b^{[2]}$ contributed to the above difference/error (the derivative of the loss function wrt $b^{[2]}$):  
+  $$dB^{[2]} = \frac{1}{m} \Sigma {dZ^{[2]}}$$
+2. first layer/hidden layer
+  - now we determine how much the hidden layer/first layer contributed towards the error. $W^{[2]T} dZ^{[2]}$ is applying the weights, in reverse (transposed), to the errors of the second layer, in order to get to the errors of the first layer. $g^{[1]\prime}$ is the derivative of the activation function, which we also need in order to get the propper error for the first layer.:  
+  $$W^{[2]T} dZ^{[2]} .* g^{[1]\prime} (Z^{[1]})$$ 
+  - how much $W^{[1]}$ contributed to the above difference/error (the derivative of the loss function wrt $W^{[1]}$):  
+  $$dW^{[1]} = \frac{1}{m} dZ^{[1]} A^{[0]T}$$
+  - how much $b^{[1]}$ contributed to the above difference/error (the derivative of the loss function wrt $b^{[1]}$):  
+  $$dB^{[1]} = \frac{1}{m} \Sigma {dZ^{[1]}}$$  
 
 - $Y$: 10 x rows/samples (one hot encoded array of 10 values for each row/sample - only one 1 value in each array, the rest are 0. The 1 corresponding to the index of the correct digit label)
 - $dZ^{[2]}$: 10 errors x rows/samples.
@@ -473,9 +483,9 @@ NOTE the $^T$ notation for transposed ($A^{[1]T}$ is just $A^{[1]}$ transposed)
 
 **Parameter updates**
 
-$$W^{[2]} := W^{[2]} - \alpha dW^{[2]}$$
-$$b^{[2]} := b^{[2]} - \alpha db^{[2]}$$
-$$W^{[1]} := W^{[1]} - \alpha dW^{[1]}$$
+$$W^{[2]} := W^{[2]} - \alpha dW^{[2]}$$  
+$$b^{[2]} := b^{[2]} - \alpha db^{[2]}$$  
+$$W^{[1]} := W^{[1]} - \alpha dW^{[1]}$$  
 $$b^{[1]} := b^{[1]} - \alpha db^{[1]}$$
 
 - $\alpha$: learning rate - a hyperparameter picked by us.
