@@ -1,4 +1,4 @@
-#FIXED Double Linear Layer Network
+# FIXED - Double Linear Layer Network
 ## Introduction
 In the [previous notebook](https://gurtaj1.github.io/blog/2023/09/17/fixed-linear-model-with-mnist-data.html), I applied some core concepts I had learned in creating and training models to my, then failing, linear equation model on the MNIST data set.  
 The optimisation I had made were to do with how many activations I was producing, per image, and what the shape of my data was whenver it had needed processing.
