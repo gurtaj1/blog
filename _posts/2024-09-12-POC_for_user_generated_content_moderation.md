@@ -12,6 +12,7 @@ Azure have Content Safety Studio which is essentially a little playground to be 
 The endpoint is essentially the way in which we send our content and request that it be assessed for safety (content moderation).
 
 ![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety_studio.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety_studio.png)
+
 ![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety_text_recognition_try_out.png](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety_text_recognition_try_out.png)
 
 ## Setting up the backend
@@ -219,9 +220,9 @@ This was all done in javascript, within the React framework, as this is what the
 
 The execution of this logic can be seen in the two videos below:
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety-new_post.mov](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety-new_post.mov)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety-new_post.gif](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety-new_post.gif)
 
-![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety_user_bio.mov](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety_user_bio.mov)
+![https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety-user_bio.gif](https://raw.githubusercontent.com/gurtaj1/blog/master/post%20assets/content_safety-user_bio.gif)
 
 ## And that was it
 
